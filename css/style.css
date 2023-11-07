@@ -6777,6 +6777,18 @@ animation: blink 0.7s infinite;
 	/*border-radius:0 120px 0 0;*/
 }
 
+/* Styles for larger screens (greater than 768px wide) */
+.page-deco {
+    display: block; /* Display the element by default */
+  }
+  
+  /* Media query to hide the element on screens with a maximum width of 768px (typical for mobile devices) */
+  @media (max-width: 768px) {
+    .page-deco {
+      display: none; /* Hide the element on smaller screens */
+    }
+  }
+
 .page-deco{
 	position:fixed;
 	top:50%;
