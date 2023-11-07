@@ -6785,9 +6785,15 @@ animation: blink 0.7s infinite;
   /* Media query to hide the element on screens with a maximum width of 768px (typical for mobile devices) */
   @media (max-width: 768px) {
     .page-deco {
-      display: none; /* Hide the element on smaller screens */
+      display: block; /* Display the element by default on mobile devices */
     }
   }
+  
+  /* Hide the page-deco on pages with the "disable-page-deco" class */
+  body.disable-page-deco .page-deco {
+    display: none; /* Hide the element on pages with this class */
+  }
+  
 
 .page-deco{
 	position:fixed;
