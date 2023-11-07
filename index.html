@@ -395,6 +395,16 @@
     <script src="js/typed.js"></script>
     <script src="js/typed-custom-2.js"></script>
     <script src="js/designesia.js"></script>
+    <script>
+    function resizePageBasedOnPortfolio(clickedTab) {
+        const sectionExperiencesHeight = document.getElementById('section-experiences').clientHeight;
+        const body = document.body;
+        const wrapper = document.getElementById('wrapper');
+    
+        body.style.height = sectionExperiencesHeight + 'px';
+        wrapper.style.height = sectionExperiencesHeight + 'px';
+    }
+    </script>
 
 </body>
 

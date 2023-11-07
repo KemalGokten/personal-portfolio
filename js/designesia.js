@@ -644,6 +644,7 @@
 			var indexer = jQuery(this).index(); //gets the current index of (this) which is #nav li
 			jQuery(this).parent().parent().find('.de_tab_content > div:eq(' + indexer + ')').fadeIn(); //uses whatever index the link has to open the corresponding box 
 			jQuery(this).find('.v-border').fadeTo(150, 1);
+			resizePageBasedOnPortfolio(this);
 		});
 		// request quote function
 		var rq_step = 1;
