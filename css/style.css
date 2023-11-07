@@ -117,8 +117,16 @@ body {
 
 /* Codes i added */
 .tab_single_content {
-height: 460px;
-overflow-y: scroll;
+    height: auto; /* Let the content determine the height */
+    overflow-y: visible; /* Show the content without scrolling */
+}
+
+/* Media query for desktop screens (adjust the min-width as needed) */
+@media (min-width: 768px) {
+    .tab_single_content {
+        height: 460px; /* Set a fixed height for desktop screens */
+        overflow-y: scroll; /* Enable vertical scrolling if content exceeds the height */
+    }
 }
 
 .override-background-size {
