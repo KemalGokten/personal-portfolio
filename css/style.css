@@ -952,6 +952,23 @@ header.header-mobile.header-light #menu-btn {
 	padding:100px 60px 90px 60px; 
 }
 
+@media (min-width: 768px) {
+    .content-wrap {
+        overflow-y: scroll;
+    }
+    .right-scroll-wrap{
+        height: 100vh;
+    }
+    .img-url{
+        height: 100vh
+    }
+    .homepage{
+        height: 100vh
+    }
+}
+
+
+
 /* ================================================== */
 
 
