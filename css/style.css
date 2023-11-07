@@ -9546,6 +9546,12 @@ img {
         height: auto;
     }
 }
+@media only screen and (min-width: 480px) {
+    .resume-btn{
+        display: none !important;
+    }
+}
+
 
 /* -------------------------------------------------- 
 	design for 320px
@@ -9582,7 +9588,7 @@ img {
 	
 	a.btn-download {
 		display:none;
-    }
+    }    
 }
 
 @media only screen and (max-width: 480px) {
