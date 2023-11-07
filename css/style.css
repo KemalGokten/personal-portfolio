@@ -122,12 +122,12 @@ body {
 }
 
 /* Media query for desktop screens (adjust the min-width as needed) */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .tab_single_content {
-        height: 460px; /* Set a fixed height for desktop screens */
-        overflow-y: scroll; /* Enable vertical scrolling if content exceeds the height */
+        height: 460px; 
+        overflow-y: scroll; 
     }
-}
+} */
 
 .override-background-size {
     background-size: cover !important;
