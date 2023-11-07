@@ -6685,9 +6685,9 @@ footer .widget_list li a {
 	top:85%;
 	padding-right:40px;
 }
-.mask.s2:hover .cover .text{
-	top:65%;
-}
+/* .mask.s2:hover .cover .text{
+	top:476px;
+} */
 .mask.s2 .cover h2{
 	font-size:28px;
 	border:none;
@@ -9589,6 +9589,8 @@ img {
 	a.btn-download {
 		display:none;
     }    
-}
 
-@media only screen and (max-width: 480px) {
+   
+
+
+}

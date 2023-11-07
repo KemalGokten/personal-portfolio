@@ -404,6 +404,48 @@
     }
     </script>
 
+    <script>
+    // Get a NodeList of all elements with the class 'mask s2 full-height'
+    const maskElements = document.querySelectorAll('.mask.s2.full-height');
+
+    // Define a function to run when any of the elements are hovered
+    function handleHover(event) {
+        console.log("Windows height" + window.outerHeight);
+        const targetElement = event.currentTarget; // Get the hovered element
+        console.log(targetElement);
+        
+
+        // You can access and manipulate the properties of the hovered element
+        const textElement = targetElement.querySelector('.cover .text');
+        console.log(textElement);
+        
+        const topHeight = targetElement.clientHeight - textElement.clientHeight;
+        console.log("text eleemnt client height" + textElement.clientHeight);
+
+        textElement.style.top = topHeight -20 + 'px';
+        console.log(textElement.style.top);
+
+    }
+
+    function handleOutHover(event) {
+        const targetElement = event.currentTarget; // Get the hovered element
+        const textElement = targetElement.querySelector('.cover .text');
+        
+        textElement.style.top = 85 +'%';
+    }
+
+    // Add the event listener to each of the 'mask' elements
+    maskElements.forEach((element) => {
+        element.addEventListener("mouseover", handleHover);
+        element.addEventListener("mouseout", handleOutHover);
+        element.addEventListener("touchstart", handleHover);
+        element.addEventListener("touchend", handleOutHover);
+        // element.addEventListener("touchswipe", handleHover);
+    });
+
+    </script>
+
+
 </body>
 
 </html>
