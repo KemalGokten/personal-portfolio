@@ -16,18 +16,21 @@
 	 * header
 	 * --------------------------------------------------*/
 	
-	function mark_menu(){
-		jQuery('#mainmenu li a').each(function () {
-                if (this.href.indexOf('#') != -1) {
+	function mark_menu() {
+		var hash = window.location.hash;
+		if (hash) {
+			// If a hash exists, find the corresponding menu item and add the "active" class
+			jQuery('#mainmenu li a').each(function () {
+				if (jQuery(this).attr('href') === hash) {
+					jQuery(this).addClass('active');
+				} else {
 					jQuery(this).removeClass('active');
-                    var href = jQuery(this).attr('href');
-                    if (window.location.hash==href) {
-                        jQuery(this).addClass('active');
-                    }
-                }else{
-						jQuery('#mainmenu li:first-child a').addClass('active');
 				}
-            });
+			});
+		} else {
+			// If there's no hash, set the default menu item as "active"
+			jQuery('#mainmenu li a[href="#section-home"]').addClass('active');
+		}
 	}
 	/* --------------------------------------------------
 	 * plugin | magnificPopup
