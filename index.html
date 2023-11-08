@@ -280,7 +280,7 @@
                         <div class="row-fluid table">
                             <div class="col-md-6 va-top">
                                 <div class="img-fx">
-                                    <img src="images/misc/4.jpg" alt="">
+                                    <img src="images/misc/2.jpg" alt="" id="random-image">
                                     <div class="img-url"></div>
                                 </div>
                             </div>
@@ -416,6 +416,22 @@
         element.addEventListener("touchstart", handleHover);
         element.addEventListener("touchend", handleOutHover);
     });
+
+    </script>
+    <script>
+    const images = ["1.jpg", "2.jpg", "3.jpg"];
+
+    const imgElement = document.getElementById("random-image");
+
+    function setRandomImage() {
+        const randomIndex = Math.floor(Math.random() * images.length);
+
+        const randomImage = images[randomIndex];
+
+        imgElement.src = "images/misc/" + randomImage;
+    }
+
+    setRandomImage();
 
     </script>
 </body>
